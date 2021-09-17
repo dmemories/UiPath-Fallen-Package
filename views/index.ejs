@@ -1,0 +1,7 @@
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="myfile" accept=".xaml" ><br/><br/>
+    <input type='submit'> 
+    <% if (downloadUrl.length > 0) { %>
+        <input type="button" value="Download" <% { %>onclick="window.open('<%= downloadUrl %>', '_blank')"<% } %>/>
+    <% } %>
+</form>

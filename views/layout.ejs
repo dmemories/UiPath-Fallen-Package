@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UiPath Fallen Package</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="title">UiPath Fallen Package</div>
+        <% if (succMsg != '') { %>
+            <div class="succMsg"><%= succMsg %></div>
+            <script> setTimeout(() => { document.getElementsByClassName('succMsg')[0].display === "none"; }, 3000) </script>
+        <% } %>
+        <% if (errMsg != '') { %>
+            <div class="errMsg"><%= errMsg %></div>
+        <% } %>
+        <div class="body"><%- body %></div>
+    </div>
+</body>
+</html>
